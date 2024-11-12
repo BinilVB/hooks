@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+  const input1 = useRef();
+  const but=()=>{
+    console.log(input1.current.value);
+  } 
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <input type="text" ref={input1}/>
+    <button onClick={but}>button</button>
+    </>
   );
 }
 
